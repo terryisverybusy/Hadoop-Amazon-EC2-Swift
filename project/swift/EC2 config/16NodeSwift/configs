@@ -1,0 +1,35 @@
+# Set following config with an absolute path to the credentials file
+AWS_CREDENTIALS_FILE=/home/ubuntu/credentialsterry.csv
+
+# Set the number of worker nodes required (limited by your account quotas)
+AWS_WORKER_COUNT=16
+
+# Set the name for the keypair used to ssh to instances
+# A key will be generated in path if none are found
+AWS_KEYPAIR_NAME=key_pair.pem.txt
+# Set following config with an absolute path to where you want the keypair file
+AWS_KEYPAIR_FILE=/home/ubuntu/key_pair.pem.txt
+
+#ubuntu is the default user on Ubuntu nodes
+AWS_USERNAME=ubuntu
+
+# Ubuntu Server 14.04 LTS (PV), SSD Volume Type - ami-c9d497f9 (64-bit)
+HEADNODE_IMAGE=ami-c9d497f9
+
+# Headnode instance type, refer to Amazon instance types page for reference
+# Legal machine types : t1.micro | m1.small | m1.medium | m1.large
+HEADNODE_MACHINE_TYPE=c3.large
+
+# Ubuntu Server 14.04 LTS (PV), SSD Volume Type - ami-c9d497f9 (64-bit)
+WORKER_IMAGE=ami-c9d497f9
+# Headnode instance type, refer to Amazon instance types page for reference
+# Legal machine types : t1.micro | m1.small | m1.medium | m1.large
+WORKER_MACHINE_TYPE=t1.micro
+
+# The following allows a script to executed on the worker at boot time
+# WORKER_INIT_SCRIPT=foo.sh
+# Do not change following parameters
+AWS_REGION=us-west-2
+SECURITY_GROUP=swift_security_group1
+
+
